@@ -1,0 +1,149 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>RunDay</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+   	.text{
+		width:100%;
+		height:967px;
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;	
+		background-color: #eef6f3;
+	}
+	.text div{
+		font-size:40px;
+		font-weight: bold;
+	}
+	.number span{
+		margin-left: 100px;
+	}
+	.custom{
+	display: flex;
+	}
+	.custom span{
+		margin-left: 140px;
+	}
+	.number span:nth-child(1){
+	padding-right: 60px;
+	}
+	.custom span{
+	font-size: 37px;
+	}
+	.second{
+	width: 100%;
+	height: 700px;
+	}
+	/*이펙트 효과  */
+	@import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
+
+	html, body { height: 100%; }
+	body { display: flex; justify-content: center; align-items: center; margin:20px 0; text-align:center; background:beige; overflow:hidden; }
+	
+	h1 {
+	 font-size:5em;
+	 font:bold 7.5vw/1.6 'Signika', sans-serif;
+	 user-select:none;
+	}
+	
+	h1 span { display:inline-block; animation:float .2s ease-in-out infinite; }
+	 @keyframes float {
+	  0%,100%{ transform:none; }
+	  33%{ transform:translateY(-1px) rotate(-2deg); }
+	  66%{ transform:translateY(1px) rotate(2deg); }
+	}
+	body:hover span { animation:bounce .6s; }
+	@keyframes bounce {
+	  0%,100%{ transform:translate(0); }
+	  25%{ transform:rotateX(20deg) translateY(2px) rotate(-3deg); }
+	  50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
+	}
+	
+	span:nth-child(4n) { color:hsl(60, 75%, 55%); text-shadow:1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%), 3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%); }
+	span:nth-child(4n-1) { color:hsl(135, 35%, 55%); text-shadow:1px 1px hsl(135, 35%, 45%), 2px 2px hsl(135, 35%, 45%), 3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%); }
+	span:nth-child(4n-2) { color:hsl(155, 35%, 60%); text-shadow:1px 1px hsl(155, 25%, 50%), 2px 2px hsl(155, 25%, 50%), 3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%); }
+	span:nth-child(4n-3) { color:hsl(30, 65%, 60%); text-shadow:1px 1px hsl(30, 45%, 50%), 2px 2px hsl(30, 45%, 50%), 3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%); }
+	
+	h1 span:nth-child(2){ animation-delay:.05s; }
+	h1 span:nth-child(3){ animation-delay:.1s; }
+	h1 span:nth-child(4){ animation-delay:.15s; }
+	h1 span:nth-child(5){ animation-delay:.2s; }
+	h1 span:nth-child(6){ animation-delay:.25s; }
+	h1 span:nth-child(7){ animation-delay:.3s; }
+	h1 span:nth-child(8){ animation-delay:.35s; }
+	h1 span:nth-child(9){ animation-delay:.4s; }
+	h1 span:nth-child(10){ animation-delay:.45s; }
+	h1 span:nth-child(11){ animation-delay:.5s; }
+	h1 span:nth-child(12){ animation-delay:.55s; }
+	h1 span:nth-child(13){ animation-delay:.6s; }
+	h1 span:nth-child(14){ animation-delay:.65s; }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#page-top">RunDay</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="navi">
+                	<ul>
+                		<li><a href="#">게시판</a></li>
+                		<li><a href="#">주행거리</a></li>
+                		<li><a href="#">코스추천</a></li>
+                		<li><a href="#">러닝크루</a></li>
+                		<li><a href="#">고객센터</a></li>
+                	</ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#!">회원가입</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">로그인</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="text">
+			<h1>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span>런</span>
+				<span>데</span>
+				<span>이</span>
+				<span></span>
+				<span>고</span>
+				<span>객</span>
+				<span>센</span>
+				<span>터</span>
+				<span></span>
+				<span></span>
+			</h1>
+			<div class="custom">
+				<span>일반 상담</span><br>
+				<span>피해⊙사기 상담</span>
+			</div>
+			<div class="number">
+				<span>1588-9876</span>
+				<span>1588-1234</span>
+			</div><br>
+			<div class="wait">
+				<span>현재 상담대기▶</span>
+				<span style="color: green;">보통</span>
+			</div>	
+ </body>
+ </html>
