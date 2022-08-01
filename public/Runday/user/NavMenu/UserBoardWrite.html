@@ -1,0 +1,196 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>RunDay</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+        *{
+        	margin: 0;
+        	padding: 0;
+        }
+		
+        ul, li{
+        	list-style: none;
+        	color: inherit;
+        }
+        a{
+        	text-decoration: none;
+        	color: inherit;
+        }
+        .board_wrap{
+        	width: 1000px;
+        	margin: 100px auto;
+        }
+        .board_title{
+        	margin-bottom: 30px;
+        }
+       	.board_title strong{
+       		font-size: 3rem;
+       	}
+       	.board_title p{
+       		margin-top: 5px;
+       		font-size: 1.4rem;
+       	}
+       	      	.bt_wrap{
+       		margin-top: 30px;
+       		font-size: 0;
+       		text-align: center;
+       	}
+       	.bt_wrap a{
+       		display: inline-block;
+       		min-width: 80px;
+       		margin-left: 10px;
+       		padding: 10px;
+       		border: 1px solid #000;
+       		border-radius: 2px;
+       		font-size: 1.4rem;
+       	}
+       	.bt_wrap a:first-child{
+       		margin-left: 0;
+       	}
+       	.bt_wrap a.on{
+       		background: #000;
+       		color: #fff;
+       	}
+       	.board_write{
+       		border-top: 2px solid #000;
+       	}
+       	.board_write .title,
+       	.board_write .info{
+       		padding: 15px;
+       	}
+       	.board_write .info{
+       		border-top: 1px dashed #ddd;
+       		border-bottom: 1px solid #000;
+       		font-size: 0;
+       	}
+       	
+       	.board_write .title dt,
+       	.board_write .title dd,
+       	.board_write .info dt,
+       	.board_write .info dd{
+       		display: inline-block;
+       		vertical-align: middle;
+       		font-size: 1.4rem;
+       	}
+       	.board_write .title dt,
+       	.board_write .info dt{
+       		width: 100px;
+       		
+       	}
+       	.board_write .title dd{
+       		width: calc(100% - 100px);
+       	}
+       	.board_write .title input[type="text"],
+       	.board_write .info input[type="text"]
+       	.board_write .info title input[type="password"]{
+   			padding: 10px;
+   			box-sizing: border-box;	
+       	}
+       	.board_write .title input[type="text"]{
+   			width: 80%;    		
+       	}
+       	.board_write .cont{
+       		border-bottom: 1px solid #000;
+       	}
+       	.board_write .cont textarea{
+       		display: block;
+       		width: 100%;
+       		height: 300px;
+       		padding: 15px;
+       		box-sizing: border-box;
+       		border: 0;
+       		resize: vertical;
+       	}
+       	.board_write .title dl{
+       		font-size: 0;
+       	}
+       	.board_write .info dl{
+       		display: inline-block;
+       		width: 50%;
+       		vertical-align: middle;
+       	}
+        </style>
+    </head>
+    <body id="page-top"> 
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#page-top">RunDay</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="navi">
+                	<ul>
+                		<li><a href="#">게시판</a></li>
+                		<li><a href="#">주행거리</a></li>
+                		<li><a href="#">코스추천</a></li>
+                		<li><a href="#">러닝크루</a></li>
+                		<li><a href="#">고객센터</a></li>
+                	</ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#!">회원가입</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">로그인</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="board_wrap">
+	        <div class="board_title">
+	       		<strong>자유 게시판</strong>
+	       		<p>운영원칙에 따라 자유롭게 이용하시면 됩니다.</p>
+	       	</div>
+	       	<div class="board_write_wrap">
+	       		<div class="board_write">
+	       			<div class="title">
+	       				<dl>
+	       					<dt>제목</dt>
+	       					<dd>
+	       						<input type="text" placeholder="제목 입력">
+	       					</dd>
+	       				</dl>
+	       			</div>
+	       			<div class="info">
+	       				<dl>
+	       					<dt>글쓴이</dt>
+	       					<dd>
+	       						<input type="text" placeholder="글쓴이 입력">
+	       					</dd>
+	       				</dl>
+	       				<dl>
+	       					<dt>비밀번호</dt>
+	       					<dd>
+	       						<input type="text" placeholder="비밀번호 입력">
+	       					</dd>
+	       				</dl>
+	       			</div>
+	       			<div class="cont">
+	       				<textarea placeholder="내용 입력"></textarea>
+	       			</div>
+	       		</div>
+		       	<!--목록/수정 -->
+		     	<div class="bt_wrap">
+		        	<a href="#" class="on">등록</a>
+		        	<a href="#">취소</a>
+	       	    </div>
+	    	</div>
+    	</div>
+     <div class="footer">
+        	<footer class="py-5 bg-black">
+           		<div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Runday!</p></div>
+      		 </footer>
+		</div>     
+ </body>
+ </html>

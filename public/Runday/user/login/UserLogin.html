@@ -19,8 +19,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@600&display=swap');
     *{
         margin: 0;
-        padding: 0;
-       
+        padding: 0;       
     }
     .wrap{
         width: 100%;
@@ -28,19 +27,19 @@
     }
     .logo{
         text-align: center;
-        margin-top: 80px;
         width:100%;
-        height: 50px;
+        height:284px;
+        background-image: url("../image/distance.jpg");
     }
     .login{
         width: 100%;
-        height: 330px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         line-height: 10px;
         padding-bottom: 10px;
+        padding-top: 50px;
     }
     .switch-button {
         position: relative;
@@ -54,7 +53,6 @@
         width: 0;
         height: 0;
     }
-
     .onoff-switch {
         position: absolute;
         cursor: pointer;
@@ -68,7 +66,6 @@
         -webkit-transition: .4s;
         transition: .4s;
     }
-
     .onoff-switch:before {
         position: absolute;
         content: "";
@@ -81,7 +78,6 @@
         transition: .4s;
         border-radius:20px;
     }
-
     .switch-button input:checked + .onoff-switch {
         background-color: blue;
         box-shadow: inset 1px 5px 1px blue;
@@ -98,18 +94,17 @@
     .submit button{
         width:170px;
         height: 40px;
-        background-color: gray;
-    }
-    .hr{
-        width: 100%;
-        height: 10px;  
+        background-color: #19ce60;
+        ;
     }
     .link{
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        align-items:center;
+        flex-direction:column;
+        justify-content:center;
         width: 100%;
         line-height: 10px;
+        height: 400px;
     }
     .link button{
         width:400px;
@@ -123,23 +118,19 @@
     .submit button{
         width:400px;
         border-radius: 15px;
+        margin-top: 10px;
     }
-    h4{
-        margin-right: 227px;
+    h6{
+        margin-right: 215px;
     }
-    #page-top{
-    	margin-top: 200px;
-    }
-    .submit button:hover {
-		background-color: beige;
-	}
-	.runday{
-		height: 70px;
-	}
+	/* 소셜 로그인 css */
+
+</style>
         </style>
     </head>
-    <body id="page-top"> 
+    <body> 
         <!-- Navigation-->
+    <div class="wrap">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
                 <a class="navbar-brand" href="../MainHomepage/UserMainHomepage.html">RunDay</a>
@@ -161,11 +152,7 @@
                 </div>
             </div>
         </nav>
-  <div class="wrap">
     <div class="logo">
-        <h1>
-        	<img alt="" src="../image/runday.png" class="runday">
-        </h1>
     </div>
     <div class="login">
         <div class="id">
@@ -179,28 +166,29 @@
             <input type="checkbox"/>
             <span class="onoff-switch"></span>
             </label>
-            <h4>Auto Login</h4>
+            <h6> &nbsp;로그인 상태 유지</h6>
         </div>
         <div class="submit">
             <p><button type="button">로그인</button></p>
         </div>
         <div class="find">
-            <span><a href="#">아이디 찾기</a></span>/
+            <span><a href="#">아이디 찾기</a></span>
+            &nbsp; | &nbsp;
             <span><a href="#">비밀번호 찾기</a></span>
         </div>
     </div>
     <div class="link">
-        <button type="button" style="background-color: #fee102;;">Kakao</button>
-        <button type="button" style="background-color: #19ce60;">Naver</button>
-        <button type="button" style="background-color: red;">Google</button>
-        <button type="button" style="background-color: #3578e5;">Facebook</button>
+       	<img alt="" src="../image/naver.png" style="width:200px;">
+    	<img alt="" src="../image/kakao.png" style="width:200px;">
+        <img alt="" src="../image/google.png" style="width:200px;">
+        <img alt="" src="../image/facebook.png" style="width:200px;">
+       
     </div>  
-</div>
  <!-- Footer-->
-        <footer class="py-5 bg-black" style="margin-top: 267px";
-        ">
+        <footer class="py-5 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Runday!</p></div>
         </footer>
+     </div>
  <script src="https://kit.fontawesome.com/0e2ca97461.js" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
