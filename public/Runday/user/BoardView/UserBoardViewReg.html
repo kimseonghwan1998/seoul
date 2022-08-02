@@ -154,6 +154,61 @@
         	width: 100px;
         	height: 28px;
         }
+        /*리스트 css  */
+        .board_view{
+        	width:100%;
+        	border-top: 2px solid #000;
+        	font-size: 1.4rem;
+        }
+        .board_view .title{
+        	padding: 20px 15px;
+        	border-bottom: 1px dashed #ddd;
+        	font-size: 2rem;
+        }
+        .board_view .info{
+        	padding: 5px;
+        	border-bottom: 1px solid #999;
+        	font-size: 0;
+        	margin-top: 20px;
+        }
+        .board_view .info dl{
+        	position: relative;
+        	display: inline-block;
+        	padding: 0 20px;
+        }
+        .board_view .info dl:first-child{
+        	padding-left: 0;
+        }
+        .board_view .info dl::before{
+        	content: "";
+        	position: absolute;
+        	top: 10px;
+        	left: 0;
+        	display: block;
+        	width: 1px;
+        	height: 18px;
+        	background: #ddd;
+        }
+        .board_view .info dl:first-child::before{
+        	display: none;
+        }
+        
+        .board_view .info dl dt,
+        .board_view .info dl dd{
+        	display: inline-block;
+        	font-size: 1.4rem;
+        }
+        .board_view .info dl dd{
+        	margin-left: 10px;
+        	color: #777;
+        }
+        .board_view .cont{
+        	padding: 15px;
+        	height: 470px;
+        	border-bottom: 1px solid #000;
+        	line-height: 160%;
+        	font-size: 1.4rem;
+        }
         </style>
     </head>
     <body id="page-top"> 
@@ -180,107 +235,50 @@
             </div>
         </nav>
         <div class="board_wrap">
-        	<div class="board_title">
+            <div class="board_title">
         		<strong>자유 게시판</strong>
         		<p>운영원칙에 따라 자유롭게 이용하시면 됩니다.</p>
         	</div>
-        	<div class="board_list_wrap">
-        		<div class="board_list">
-        			<div class="top">
-        				<div class="num">No.</div>
-        				<div class="title">
-        					<a href="../BoardView/UserBoardView.html">제목</a>
-        				</div>
-        				<div class="writer">글쓴이</div>
-        				<div class="date">작성일</div>
-        				<div class="count">조회</div>
+        	<div class="board_view_wrap">
+        		<div class="board_view">
+        			<div class="title">
+        				<input type ="text" value="오랜만에 뛰니 좋네요!">
         			</div>
-        			<div>
-			        	<div class="num">6</div>
-        				<div class="title"><a href="../BoardView/UserBoardView.html">오랜만에 뛰니 좋네요!</a></div>
-        				<div class="writer">이재용</div>
-        				<div class="date">22.07.30</div>
-        				<div class="count">57</div>
+        			<div class="info">
+        				<dl>
+        					<dt>번호</dt>
+        					<dd>6</dd>
+        				</dl>
+        				<dl>
+        					<dt>글쓴이</dt>
+        					<dd>이재용</dd>
+        				</dl>
+        				<dl>
+        					<dt>작성일</dt>
+        					<dd>2022.07.30</dd>
+        				</dl>
+        				<dl>
+        					<dt>조회</dt>
+        					<dd>57</dd>
+        				</dl>
         			</div>
-        			<div>
-			        	<div class="num">5</div>
-        				<div class="title"><a href="#">페이스 단축 팁</a></div>
-        				<div class="writer">김런</div>
-        				<div class="date">22.07.28</div>
-        				<div class="count">57</div>
+        			<div class="cont">
+        				<input type ="text" value="무야호~">
         			</div>
-        			<div>
-			        	<div class="num">4</div>
-        				<div class="title"><a href="#">비오는 날 10키로 뛰었어요ㅎ</a></div>
-        				<div class="writer">메시</div>
-        				<div class="date">22.07.27</div>
-        				<div class="count">49</div>
-        			</div>
-  			        <div>
-			        	<div class="num">3</div>
-        				<div class="title"><a href="#">한강 같이 뛰실 분</a></div>
-        				<div class="writer">호날두</div>
-        				<div class="date">22.07.26</div>
-        				<div class="count">23</div>
-        			</div>
-  			        <div>
-			        	<div class="num">2</div>
-        				<div class="title"><a href="#">러닝화 추천좀 해주세요~~</a></div>
-        				<div class="writer">박지성</div>
-        				<div class="date">22.08.01</div>
-        				<div class="count">23</div>
-        			</div>
-        			<div>
-			        	<div class="num">1</div>
-        				<div class="title"><a href="#">러닝 호흡법 질문이요.</a></div>
-        				<div class="writer">손흥민</div>
-        				<div class="date">22.07.25</div>
-        				<div class="count">35</div>
-        			</div>
-        			<div></div>
-        			<div></div>
-        			<div></div>
-        			<div></div>
         		</div>
-        		<div class="board_page">
-        			<a href="#" class="bt first"> << </a>
-        			<a href="#" class="bt prev"> < </a>
-        			<a href="#" class="num on">1</a>
-        			<a href="#" class="num">2</a>
-        			<a href="#" class="num">3</a>
-        			<a href="#" class="num">4</a>
-        			<a href="#" class="num">5</a>
-        			<a href="#" class="bt"> > </a>
-        			<a href="#" class="bt"> >> </a>
-        		</div>
-        		<div class="bt_wrap">
-        			<a href="UserBoardWrite.html" class="on">
-        				<i class="fa-solid fa-pen"></i>
-       				</a>
-        			<!--<a href="#">수정</a> -->
-        		</div>
+	        	<div class="bt_wrap">
+	        		<div class="bt_wrap">
+	        			<a href="../NavMenu/UserBoard.html" class="on">목록</a>
+	        			<a href="#">수정</a>
+	        		</div>
+	        	</div>
         	</div>
-        	<div class="search">
-        		<div class="text">
-        			<select name="search_condition" class="search_condition">
-        				<option value="all">검색조건</option>
-        				<option value="No">번호</option>
-        				<option value="title">제목</option>
-        				<option value="writer">글쓴이</option>
-        				<option value="date">작성일</option>
-        			</select>
-        			<input type="text" placeholder="검색어를 입력해주세요">
-        			&nbsp;&nbsp;
-        			<a href="#">
-        				<i class="fa-solid fa-magnifying-glass"></i>
-       				</a>
-        		</div>
-        	</div>       	
         </div>
         <div class="footer">
-		        <footer class="py-5 bg-black">
-	            	<div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Runday!</p></div>
-	       		 </footer>
-		</div>     
+		<!-- Footer-->
+			 <footer class="py-5 bg-black">
+            	<div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Runday!</p></div>
+       		 </footer>
+		</div>
  </body>
  </html>
