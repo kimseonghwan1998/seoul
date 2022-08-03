@@ -25,106 +25,155 @@
         width: 100%;
         height: 100%;
     }
-    .logo{
-        text-align: center;
-        width:100%;
-        height:284px;
-        background-image: url("../image/distance.jpg");
-    }
-    .login{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        line-height: 10px;
-        padding-bottom: 10px;
-        padding-top: 50px;
-    }
-    .switch-button {
-        position: relative;
-        display: inline-block;
-        width: 55px;
-        height: 30px;
-    }
-
-    .switch-button input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-    .onoff-switch {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius:20px;
-        background-color: #ccc;
-        box-shadow: inset 1px 5px 1px #999;
-        -webkit-transition: .4s;
-        transition: .4s;
-    }
-    .onoff-switch:before {
-        position: absolute;
-        content: "";
-        height: 22px;
-        width: 22px;
-        left: 4px;
-        bottom: 4px;
-        background-color: #fff;
-        -webkit-transition: .5s;
-        transition: .4s;
-        border-radius:20px;
-    }
-    .switch-button input:checked + .onoff-switch {
-        background-color: blue;
-        box-shadow: inset 1px 5px 1px blue;
-    }
-
-    .switch-button input:checked + .onoff-switch:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
-    }
-    .toggle{
-        display: flex;
-    }
-    .submit button{
-        width:170px;
-        height: 40px;
-        background-color: #19ce60;
-        ;
-    }
-    .link{
-        display: flex;
-        align-items:center;
-        flex-direction:column;
-        justify-content:center;
-        width: 100%;
-        line-height: 10px;
-        height: 400px;
-    }
-    .link button{
-        width:400px;
-        height: 40px;
-    }
-    input{
-        width: 400px;
-        height: 40px;
-        border-radius: 10px;
-    }
-    .submit button{
-        width:400px;
-        border-radius: 15px;
-        margin-top: 10px;
-    }
-    h6{
-        margin-right: 215px;
-    }
-	/* 소셜 로그인 css */
-
+	:root{
+	}
+	*{
+	    padding: 0;
+	    margin: 0;
+	    box-sizing: border-box;
+	    font-family: 'Alata', sans-serif;
+	}
+	
+	.page-container{
+	    width: 100vw;
+	    height: 100vh;
+	    background: #eff0f2;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	
+	}
+	.shadow{
+	    -webkit-box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+	    -moz-box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+	    box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+	}/*
+	.shadow-light{
+	    -webkit-box-shadow: 45px 45px 104px -33px rgba(38,38,38,0.92);
+	    -moz-box-shadow: 45px 45px 104px -33px rgba(38,38,38,0.92);
+	    box-shadow: 45px 45px 104px -33px rgba(38,38,38,0.92);
+	
+	}*/
+	.login-form-container{
+	 
+	    background:#f5f5f5 ;
+	    width:860px;
+	    height: 540px;
+	    display: flex;
+	    flex-direction: row;
+	    box-shadow: 10px black;
+	    border-radius: 10px;
+	
+	}
+	.login-form-right-side{
+	    width: 50%; 
+	    border-radius: 10px 0px 0px 10px;
+	    padding:75px;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+	    color: white;
+		background-image: url("../image/cloud.jpg");
+	}
+	.login-form-right-side h1{
+	    color: white;
+	    width:100%;
+	    text-align: right;
+	    opacity: 0.9;
+	
+	}
+	.login-form-right-side p{
+	    padding-top: 50px;
+	    font-size:12px;
+	    text-align: right;
+	    opacity: 0.8;
+	}
+	.login-form-left-side{
+	    width: 50%;
+	    border-radius: 0px 10px 10px 0px;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    padding:40px;
+	    background: rgb(255,255,255);
+	background: linear-gradient(287deg, rgba(255,255,255,1) 0%, rgba(243,244,244,1) 0%, rgba(255,255,255,1) 100%);
+	}
+	.login-form-left-side .login-top-wrap{
+	    display: flex;
+	    justify-content: flex-end;
+	    align-items: center;
+	    width:100%;
+	}
+	.login-form-left-side .login-top-wrap span{
+	    color: gray;
+	    font-size: 11px;
+	    padding-right:20px;
+	
+	}
+	.login-form-left-side .login-top-wrap .create-account-btn {
+	    background: white;
+	    border:  0;
+	    width:85px;
+	    height: 35px;
+	    font-size: 11px;
+	    color: #2178ff;
+	    border-radius: 3px;
+	
+	}
+	.login-input-container{
+	    padding-top:120px;
+	    width:300px;
+	}
+	.login-input-container .login-input-wrap{
+	    width:300px;
+	    height: 45px;
+	    margin-top: 20px;
+	    border-radius: 2px;
+	    border-bottom: solid 2px #2178ff;
+	   
+	}
+	.login-input-container .login-input-wrap i{
+	    color: #2178ff;
+	    line-height: 45px;
+	}
+	
+	.login-input-container .login-input-wrap input{
+	    background: none;	   
+	    border: none;
+	    line-height: 45px;
+	    padding-left:10px;
+	    width:267px;
+	}
+	.login-input-container .login-input-wrap input:focus{
+	    outline: none;
+	}
+	.login-btn-wrap{
+	    margin-top: 40px;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;;
+	}
+	.login-btn-wrap .login-btn{
+	    width:95px;
+	    height:35px;
+	    color:white;
+	    border: 0;
+	    border-radius: 4px;
+	
+	    background: rgb(105,163,255);
+	background: linear-gradient(162deg, rgba(105,163,255,1) 0%, rgba(43,125,254,1) 50%, rgba(43,125,254,1) 100%);
+	}
+	.login-btn-wrap a{
+	    margin-top:10px;
+	    text-decoration: none;
+	    font-size: 11px;
+	    color: gray;
+	
+	}
+	.login-btn-wrap a{
+		font-size: 13px;
+	}
 </style>
         </style>
     </head>
@@ -152,43 +201,45 @@
                 </div>
             </div>
         </nav>
-    <div class="logo">
-    </div>
-    <div class="login">
-        <div class="id">
-            <p><input type="text" placeholder="아이디"></p>
+ <div class="page-container">
+        <div class="login-form-container shadow">
+            <div class="login-form-right-side">
+                <div class="top-logo-wrap">
+                    
+                </div>
+                <h1></h1>
+                <p></p>
+            </div>
+            <div class="login-form-left-side">
+                <div class="login-top-wrap">
+                    <span>계정이 없으신가요?</span>
+                    <button class="create-account-btn shadow-light">회원가입</button>
+                </div>
+                <div class="login-input-container">
+                    <div class="login-input-wrap input-id">
+                        <i class="far fa-envelope"></i>
+                        <input placeholder="아이디" type="text">
+                    </div>
+                    <div class="login-input-wrap input-password">
+                        <i class="fas fa-key"></i>
+                        <input placeholder="비밀번호"  type="password">
+                    </div>
+                </div>
+                <div class="login-btn-wrap">
+                    <button class="login-btn">로그인</button> <br>
+                    <a href="#" >아이디를 잊어버리셨나요?</a>
+                    <a href="#" >비밀번호를 잊어버리셨나요?</a>
+                </div>
+            </div>
         </div>
-        <div class="pw">
-            <p><input type="password" placeholder="비밀번호"></p>
-        </div>
-        <div class="toggle">
-            <label class="switch-button">
-            <input type="checkbox"/>
-            <span class="onoff-switch"></span>
-            </label>
-            <h6> &nbsp;로그인 상태 유지</h6>
-        </div>
-        <div class="submit">
-            <p><button type="button">로그인</button></p>
-        </div>
-        <div class="find">
-            <span><a href="#">아이디 찾기</a></span>
-            &nbsp; | &nbsp;
-            <span><a href="#">비밀번호 찾기</a></span>
-        </div>
-    </div>
-    <div class="link">
-       	<a href="#"><img alt="" src="../image/naver.png" style="width:350px;"></a>
-    	<a href="#"><img alt="" src="../image/kakao.png" style="width:350px;"></a>
-        <a href="#"><img alt="" src="../image/google.png" style="width:350px;"></a>
-        <a href="#"><img alt="" src="../image/facebook.png" style="width:350px;"></a>
-       
-    </div>  
- <!-- Footer-->
-        <footer class="py-5 bg-black">
-            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Runday!</p></div>
-        </footer>
-     </div>
+    </div> 
+    			<div class="footer">
+		        <footer class="py-5 bg-black">
+	            	<div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Runday!</p></div>
+	       		 </footer>
+		</div>
+    
+
  <script src="https://kit.fontawesome.com/0e2ca97461.js" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
