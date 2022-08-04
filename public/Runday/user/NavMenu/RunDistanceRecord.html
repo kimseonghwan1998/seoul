@@ -1,240 +1,200 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>RunDay</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap');
-        .container{
-        width:100%;
-        height: 100%;
-        }
-        .cal{
-        width:100%;
-        height: 290px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-        .pagenation{
-        width:100%;
-        height: 10%;
-        }
-        .cal input{
-        margin-left: 50px;
-        }
-        .user{
-        color: white;
-        font-size: 23px;
-        list-style: none;
-        }
-        .user a{
-        text-decoration:none;
-        color: white;
-        }
-        .page-item a{
-        color: #2EFE2E;
-        }
-        .km{
-        width:100%;
-        height: 140px;
-        }
-        .km div{
-        font-size: 30px;
-        font-weight: bold;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        }
-        .first{
-        width: 100%;
-        height: 40px;
-        display: flex;
-        justify-content: space-between;
-        }   
-        .type{
-        width:100%;
-        height: 50px;
-        display: flex;
-        justify-content: space-between;
-        font-weight: bold;
-        font-size: 20px;
-        } 
-        .pace{
-        margin-left: 55px;
-        }
-        .kcal{
-        margin-right: 50px;
-        }
-        .second{
-         width: 100%;
-        height: 40px;
-        display: flex;
-        justify-content: space-between;
-        }
-        .pagenation{
-        margin-top: 20px;
-        }
-        input{
-        border-radius: 20px;
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold;
-        }
-        .write{
-        width: 100%;
-        height: 330px;
-        display: flex;
-        justify-content:space-between;
-        }
-        .write span{
-        font-size: 30px;
-        font-weight: bold;
-        }
-        a {
-        text-decoration: none;
-        color:black;
-        }
-        a:hover{
-        color:#E6F8E0;;
-        }
-		.join{
-		background-color:#80FF00;
-		display:flex;
-		margin-left: auto;
-		margin-top: 40px;
-		}
-		.write span{
-		font-family: 'Sunflower', sans-serif;
-		display: flex;
-		justify-content: center;
-		padding-top: 50px;
-		}
-		.footer{
-		width:100%;
-		height: 37px;
-		}
-		.type span{
-		font-family: 'Sunflower', sans-serif;
-		}
-        </style>
-    </head>
-    <body>
-    <div class="container-xl">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-            <div class="container px-5">
-                <a class="navbar-brand" href="../MainHomepage/UserMainHomepage.html">RunDay</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="navi">
-                	<ul>
-                		<li><a href="#">게시판</a></li>
-                		<li><a href="#">주행거리</a></li>
-                		<li><a href="#">코스추천</a></li>
-                		<li><a href="#">러닝크루</a></li>
-                	</ul>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="user"><a href="#"><i class="fa-solid fa-user"></i> 김승환님!</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-      	<div class="cal">
-     		<form name="해당 폼의 이름" action="값을 보낼 주소" method="post">
-      		  <input type='date' name='userRun' value='2022-07-25'/>    
-      		  <!--페이지 네이션 -->
-      		  <div class="pagenation">
-	      		  <nav aria-label="Page navigation example">
-	 				 <ul class="pagination">
-	   					 <li class="page-item">
-	      					<a class="page-link" href="#" aria-label="Previous">
-	       						 <span aria-hidden="true"><</span>
-	     					 </a>
-	   					 </li>
-					    <li class="page-item"><a class="page-link" href="#">●</a></li>
-					    <li class="page-item"><a class="page-link" href="#">●</a></li>
-					    <li class="page-item"><a class="page-link" href="#">●</a></li>
-					    <li class="page-item"><a class="page-link" href="#">●</a></li>
-					    <li class="page-item"><a class="page-link" href="#">●</a></li>
-					    <li class="page-item">
-	     				 <a class="page-link" href="#" aria-label="Next">
-	       				 <span aria-hidden="true">></span>
-	     				 </a>
-	    				</li>
-	  				</ul>
-				</nav>
-			</div>
-    		</form>   		
-      	</div>
-			<div class="km">
-				<div>
-					<input type="text" value="5.31">
-				</div>
-				<div>킬로미터</div>
-				<hr>
-			</div>
-			<div class="first">
-				<span>
-					<input type="text" value="06:22">
-				</span>
-				<span>
-					<input type="text" value="33:48">
-				</span>
-				<span>
-					<input type="text" value="345">
-				</span>
-			</div>
-			<div class="type">
-				<span class="pace">페이스</span>
-				<span>시간</span>
-				<span class="kcal">칼로리</span>
-			</div>
-			<hr>
-			<div class="second">
-				<span>
-					<input type="text" value="5m">
-				</span>
-				<span>
-					<input type="text" value="--♡">
-				</span>
-				<span>
-					<input type="text" value="183">
-				</span>			
-			</div>
-			<div class="type">
-				<span class="pace">고도상승</span>
-				<span>평균 심박수</span>
-				<span class="kcal">케이던스</span>
-			</div>
-			<div class="write">
-				<a href="RunDistanceInput.html"><span><i class="fa-solid fa-person-running"></i>주행거리 등록하러 가기~</span></a>
-				<a href="#">
-					<span>
-						<i class="fa-solid fa-file-pen"></i>수정하기~
-					</span>
-				</a>
-			</div>
-		</div>
-			<div class="footer">
-		        <footer class="py-5 bg-black">
-	            	<div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Runday!</p></div>
-	       		 </footer>
-		</div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="./js/index.js" defer></script>
+  <title>Vanilla Javascript Calendar</title>
+  <style>
+  :root {
+  --dark-gray: rgb(111, 111, 111);
+}
 
- </body>
- </html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 2rem;
+  background: var(--dark-gray);
+  color: #fff;
+}
+
+.move-button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  opacity: 0.5;
+  padding: 1rem;
+  transition: 0.2s;
+}
+
+.move-button:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+#calendar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+#month {
+  font-size: 3rem;
+  font-family: "Sacramento", cursive;
+}
+
+#week {
+  list-style: none;
+  display: flex;
+}
+
+.week-day {
+  width: 50px;
+  display: grid;
+  place-content: center;
+}
+
+#calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day-box {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-content: center;
+  transition: 0.2s;
+  opacity: 1;
+}
+
+.day-box:hover {
+  cursor: pointer;
+  background: pink;
+  color: var(--dark-gray);
+  transform: translateY(-2px);
+}
+
+.today {
+  opacity: 1;
+  color: pink;
+  font-weight: bold;
+}
+
+main {
+  flex: 1 1 50%;
+  color: #555;
+  padding: 2rem;
+  border-radius: 5px;
+  background: #e5e5e5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 2rem;
+}
+
+#main-title {
+  border-bottom: 3px solid #555;
+}
+
+#main-page {
+  width: 100%;
+  height: 100%;
+  background: #555;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+#add-button {
+  width: 25px;
+  height: 25px;
+  align-self: flex-end;
+  font-weight: bold;
+}
+
+#main-page > ul {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+
+#main-page > ul > li {
+  width: 100%;
+  background: 1px solid #e5e5e5;
+}
+
+#todo-form {
+  width: 100%;
+  display: flex;
+}
+
+#todo-form > div {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#todo-form > div > input {
+  padding: 0.5rem;
+}
+
+#todo-form > button {
+  padding: 0.5rem;
+}
+  </style>
+</head>
+<body>
+  <button class="move-button" id="prev">prev</button>
+  <div id="calendar">
+    <h1 id="month"></h1>
+    <ul id="week">
+      <li class="week-day">sun</li>
+      <li class="week-day">mon</li>
+      <li class="week-day">tue</li>
+      <li class="week-day">wed</li>
+      <li class="week-day">thu</li>
+      <li class="week-day">fri</li>
+      <li class="week-day">sat</li>
+    </ul>
+    <div id="calendar-days"></div>
+  </div>
+  <button class="move-button" id="next">next</button>
+  <main>
+    <h1 id="main-title">To-Dos</h1>
+    <section id="main-page">
+      <form id="todo-form">
+        <div>
+          <input type="text" placeholder="Content">
+          <input type="date">
+        </div>
+        <button>Add</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

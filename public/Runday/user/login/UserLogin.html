@@ -1,248 +1,84 @@
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>RunDay</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');      
-        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@600&display=swap');
-    *{
-        margin: 0;
-        padding: 0;       
-    }
-    .wrap{
-        width: 100%;
-        height: 100%;
-    }
-	:root{
-	}
-	*{
-	    padding: 0;
-	    margin: 0;
-	    box-sizing: border-box;
-	    font-family: 'Alata', sans-serif;
-	}
-	
-	.page-container{
-	    width: 100vw;
-	    height: 100vh;
-	    background: #eff0f2;
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	
-	}
-	.shadow{
-	    -webkit-box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
-	    -moz-box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
-	    box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
-	}/*
-	.shadow-light{
-	    -webkit-box-shadow: 45px 45px 104px -33px rgba(38,38,38,0.92);
-	    -moz-box-shadow: 45px 45px 104px -33px rgba(38,38,38,0.92);
-	    box-shadow: 45px 45px 104px -33px rgba(38,38,38,0.92);
-	
-	}*/
-	.login-form-container{
-	 
-	    background:#f5f5f5 ;
-	    width:860px;
-	    height: 540px;
-	    display: flex;
-	    flex-direction: row;
-	    box-shadow: 10px black;
-	    border-radius: 10px;
-	
-	}
-	.login-form-right-side{
-	    width: 50%; 
-	    border-radius: 10px 0px 0px 10px;
-	    padding:75px;
-	    display: flex;
-	    flex-direction: column;
-	    justify-content: center;
-	    align-items: center;
-	    color: white;
-		background-image: url("../image/cloud.jpg");
-	}
-	.login-form-right-side h1{
-	    color: white;
-	    width:100%;
-	    text-align: right;
-	    opacity: 0.9;
-	
-	}
-	.login-form-right-side p{
-	    padding-top: 50px;
-	    font-size:12px;
-	    text-align: right;
-	    opacity: 0.8;
-	}
-	.login-form-left-side{
-	    width: 50%;
-	    border-radius: 0px 10px 10px 0px;
-	    display: flex;
-	    flex-direction: column;
-	    align-items: center;
-	    padding:40px;
-	    background: rgb(255,255,255);
-	background: linear-gradient(287deg, rgba(255,255,255,1) 0%, rgba(243,244,244,1) 0%, rgba(255,255,255,1) 100%);
-	}
-	.login-form-left-side .login-top-wrap{
-	    display: flex;
-	    justify-content: flex-end;
-	    align-items: center;
-	    width:100%;
-	}
-	.login-form-left-side .login-top-wrap span{
-	    color: gray;
-	    font-size: 11px;
-	    padding-right:20px;
-	
-	}
-	.login-form-left-side .login-top-wrap .create-account-btn {
-	    background: white;
-	    border:  0;
-	    width:85px;
-	    height: 35px;
-	    font-size: 11px;
-	    color: #2178ff;
-	    border-radius: 3px;
-	
-	}
-	.login-input-container{
-	    padding-top:120px;
-	    width:300px;
-	}
-	.login-input-container .login-input-wrap{
-	    width:300px;
-	    height: 45px;
-	    margin-top: 20px;
-	    border-radius: 2px;
-	    border-bottom: solid 2px #2178ff;
-	   
-	}
-	.login-input-container .login-input-wrap i{
-	    color: #2178ff;
-	    line-height: 45px;
-	}
-	
-	.login-input-container .login-input-wrap input{
-	    background: none;	   
-	    border: none;
-	    line-height: 45px;
-	    padding-left:10px;
-	    width:267px;
-	}
-	.login-input-container .login-input-wrap input:focus{
-	    outline: none;
-	}
-	.login-btn-wrap{
-	    margin-top: 40px;
-	    display: flex;
-	    flex-direction: column;
-	    align-items: center;;
-	}
-	.login-btn-wrap .login-btn{
-	    width:95px;
-	    height:35px;
-	    color:white;
-	    border: 0;
-	    border-radius: 4px;
-	
-	    background: rgb(105,163,255);
-	background: linear-gradient(162deg, rgba(105,163,255,1) 0%, rgba(43,125,254,1) 50%, rgba(43,125,254,1) 100%);
-	}
-	.login-btn-wrap a{
-	    margin-top:10px;
-	    text-decoration: none;
-	    font-size: 11px;
-	    color: gray;
-	
-	}
-	.login-btn-wrap a{
-		font-size: 13px;
-	}
-</style>
-        </style>
-    </head>
-    <body> 
-        <!-- Navigation-->
-    <div class="wrap">
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-            <div class="container px-5">
-                <a class="navbar-brand" href="../MainHomepage/UserMainHomepage.html">RunDay</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="navi">
-                	<ul>
-                		<li><a href="#">게시판</a></li>
-                		<li><a href="#">주행거리</a></li>
-                		<li><a href="#">코스추천</a></li>
-                		<li><a href="#">러닝크루</a></li>
-                		<li><a href="#">고객센터</a></li>
-                	</ul>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#!">회원가입</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">로그인</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
- <div class="page-container">
-        <div class="login-form-container shadow">
-            <div class="login-form-right-side">
-                <div class="top-logo-wrap">
-                    
-                </div>
-                <h1></h1>
-                <p></p>
-            </div>
-            <div class="login-form-left-side">
-                <div class="login-top-wrap">
-                    <span>계정이 없으신가요?</span>
-                    <button class="create-account-btn shadow-light">회원가입</button>
-                </div>
-                <div class="login-input-container">
-                    <div class="login-input-wrap input-id">
-                        <i class="far fa-envelope"></i>
-                        <input placeholder="아이디" type="text">
-                    </div>
-                    <div class="login-input-wrap input-password">
-                        <i class="fas fa-key"></i>
-                        <input placeholder="비밀번호"  type="password">
-                    </div>
-                </div>
-                <div class="login-btn-wrap">
-                    <button class="login-btn">로그인</button> <br>
-                    <a href="#" >아이디를 잊어버리셨나요?</a>
-                    <a href="#" >비밀번호를 잊어버리셨나요?</a>
-                </div>
-            </div>
-        </div>
-    </div> 
-    			<div class="footer">
-		        <footer class="py-5 bg-black">
-	            	<div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Runday!</p></div>
-	       		 </footer>
-		</div>
-    
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
- <script src="https://kit.fontawesome.com/0e2ca97461.js" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
- </script>
- </body>
- </html>
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>런데이_로그인</title>
+  </head>
+  <body>
+  
+
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" style="background-image: url('../image/login.jpg');"></div>
+    <div class="contents order-2 order-md-1">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7">
+            <div class="mb-4">
+              <h3><a href="../MainHomepage/UserMainHomepage.html">
+              		<img alt="런데이 로고" src="../image/runday.gif">
+              	  </a>
+              </h3>
+              <p class="mb-4">달리기를 더 쉽게 더 재밌게</p>
+            </div>
+            <form action="#" method="post">
+              <div class="form-group first">
+                <label for="username">아이디</label>
+                <input type="text" class="form-control" id="username">
+
+              </div>
+              <div class="form-group last mb-3">
+                <label for="password">비밀번호</label>
+                <input type="password" class="form-control" id="password">
+                
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <label class="control control--checkbox mb-0"><span class="caption">자동 로그인</span>
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label>
+                <span class="ml-auto"><a href="#" class="forgot-pass">아이디를 잊어버리셨나요?</a></span> 
+                <span class="ml-auto"><a href="#" class="forgot-pass">비밀번호를 잊어버리셨나요?</a></span> 
+              </div>
+              <input type="submit" value="로그인" class="btn btn-block btn-primary">
+				<span class="ml-auto"><a href="UserSignUp.html" class="forgot-pass">아이디가 없으신가요?</a></span>
+              <span class="d-block text-center my-4 text-muted"></span>
+              
+              <div class="social-login">
+                <a href="#" class="facebook btn d-flex justify-content-center align-items-center">
+                  <span class="icon-facebook mr-3"></span> 페이스북으로 로그인
+                </a>
+                <a href="#" class="twitter btn d-flex justify-content-center align-items-center">
+                  <span class="icon-twitter mr-3"></span> 트위터로 로그인
+                </a>
+                <a href="#" class="google btn d-flex justify-content-center align-items-center">
+                  <span class="icon-google mr-3"></span> 구글로 로그인
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
