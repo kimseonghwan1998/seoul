@@ -32,7 +32,8 @@
     .btn{
     	width: 150px;
     }
-    	.button {
+    
+	.button {
   width: 140px;
   height: 45px;
   font-family: 'Roboto', sans-serif;
@@ -57,9 +58,13 @@
   transform: translateY(-7px);
 }
 .button{
-	margin-top: 30px;
-	margin-left: 120px;
+	margin-left: 200px;
+	margin-top: 20px;
 }
+.pw{
+	margin-left: 190px;
+}
+
     </style>
   </head>
   <body>
@@ -70,14 +75,14 @@
     <div class="contents order-2 order-md-1">
 
       <div class="container">
-        <div class="row align-items-center justify-content-center">
+        <div class="row align-items-center justify-content-center" style="height: 772px;">
           <div class="col-md-7">
             <div class="mb-4">
               <h3><a href="../MainHomepage/UserMainHomepage.html">
               		<img alt="런데이 로고" src="../image/runday.gif">
               	  </a>
               </h3>
-              <p class="mb-4">회원가입</p>
+              <p class="mb-4">비밀번호 찾기</p>
             </div>
             <form action="#" method="post">
                <div class="form-group last mb-3">
@@ -89,31 +94,24 @@
                 <input type="text" class="form-control" id="resi_num">
               </div>
               <div class="form-group last mb-3">
-                <label for="cellnum">연락처('-'는 생략해주세요.)</label>
-                <input type="text" class="form-control" id="cellnum">
+                <label for="id">아이디</label>
+                <input type="text" class="form-control" id="id">
               </div>
               <div class="form-group last mb-3">
-                <label for="username">아이디</label>
-                <input type="text" class="form-control" id="username">
+                <label for="password">변경할 비밀번호</label>
+                <input type="password" class="form-control" id="password">
               </div>
               <div class="form-group last mb-3">
-                <label for="password">비밀번호</label>
-                <input type="password" class="form-control" id="password">                
+                <label for="repassword">비밀번호 확인</label>
+                <input type="password" class="form-control" id="repassword">
               </div>
-              <div class="form-group last mb-3">
-               	 <label for="repassword">비밀번호 확인</label>
-                 <input type="password" class="form-control" id="repassword">                
-              </div>
-              <!--성별 -->
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- 				 <input type='radio' name='gender' value='female' class="gender">남성 
- 				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- 				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  				 <input type='radio' name='gender' value='male' class="gender">여성 				 
-  			<div class="container">
- 				<button type="submit" class="button">회원가입!</button>
+              <!--  -->
+			<div class="container">
+ 				<button type="submit" class="button">비밀번호 찾기</button>
 			</div>   
+			<div class="pw">
+				<a href="UserIdFind.html">아이디를 찾고 싶으신가요?</a>
+			</div>          
           </div>
         </div>
       </div>

@@ -32,6 +32,39 @@
     .btn{
     	width: 150px;
     }
+    
+	.button {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.button:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button{
+	margin-left: 200px;
+	margin-top: 20px;
+}
+.pw{
+	margin-left: 190px;
+}
+
     </style>
   </head>
   <body>
@@ -57,13 +90,20 @@
                 <input type="text" class="form-control" id="username">
               </div>
                <div class="form-group last mb-3">
-                <label for="resi_num">주민등록번호</label>
+                <label for="resi_num">주민등록번호('-'는 생략해주세요.)</label>
                 <input type="text" class="form-control" id="resi_num">
               </div>
               <div class="form-group last mb-3">
                 <label for="cellnum">연락처('-'는 생략해주세요.)</label>
                 <input type="text" class="form-control" id="cellnum">
               </div>
+              <!--  -->
+			<div class="container">
+ 				<button type="submit" class="button">아이디 찾기</button>
+			</div>   
+			<div class="pw">
+				<a href="UserPwFind.html">비밀번호를 찾고 싶으신가요?</a>
+			</div>          
           </div>
         </div>
       </div>
