@@ -1,0 +1,115 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>RunDay</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+       		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		table{
+			border-collapse: collapse;
+		}
+		caption{
+			display: none;
+		}
+		a{
+			text-decoration: none;
+			color:inherit;
+		}
+		
+		.board_list_wrap{
+			padding:50px;
+			height: 950px;
+		}
+		.board_list{
+			width: 70%;
+			border-top: 2px solid green;
+			margin-left: 220px;
+			margin-top: 50px;
+		}
+		.board_list tr{
+			border-bottom: 1px solid #ccc;
+		}
+		.board_list th,
+		.board_list td{
+			padding: 10px;
+			font-size: 14px;
+		}
+		.board_list td{
+			text-align: center;
+		}
+		.board_list .tit:hover{
+			text-decoration: underline;
+		}
+		th{
+			text-align: center;
+		}
+		.title{
+			margin-top: 80;
+			margin-left: 210px;
+		}
+        </style>
+    </head>
+    <body id="page-top"> 
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#page-top">RunDay</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="navi">
+                	<ul>
+                		<li><a href="#">고객센터</a></li>
+                		<li><a href="#">주행거리</a></li>
+                		<li><a href="#">코스추천</a></li>
+                		<li><a href="#">러닝크루</a></li>
+                	</ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#!">회원가입</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">로그인</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       	<div class="board_list_wrap">
+			<table class="board_list">
+				<caption>게시판 목록</caption>
+				<h1 class="title">러닝크루모집</h1>
+					<thead>
+						<tr>
+							<th>크루 이름</th>
+							<th>시간대</th>
+							<th>지역</th>
+							<th>모집인원/전체인원</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tit">
+								<a href="#">얼리버드</a>
+							</td>
+							<td>월,수요일 오전 5시</td>
+							<td>서울 종로구</td>
+							<td>4명</td>
+						</tr>
+					</tbody>				
+			</table>
+        
+ </body>
+ </html>
