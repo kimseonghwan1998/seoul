@@ -1,0 +1,221 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        
+		 <link href="css/styles.css" rel="stylesheet" />
+        
+        <title>RunDay</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		table{
+			border-collapse: collapse;
+		}
+		caption{
+			display: none;
+		}
+		a{
+			text-decoration: none;
+			color:inherit;
+		}
+		
+		.board_list_wrap{
+			padding:50px;
+			height: 950px;
+		}
+		.board_list{
+			width: 70%;
+			border-top: 2px solid green;
+			margin-left: 220px;
+			margin-top: 50px;
+		}
+		.board_list tr{
+			border-bottom: 1px solid #ccc;
+		}
+		.board_list th,
+		.board_list td{
+			padding: 10px;
+			font-size: 14px;
+		}
+		.board_list td{
+			text-align: center;
+		}
+		.board_list .tit:hover{
+			text-decoration: underline;
+		}
+		.board_list_wrap .paging{
+			margin-top: 20px;
+			font-size: 0;
+			margin-left: 600px;
+		}
+		.board_list_wrap .paging a{
+			display: inline-blcok;
+			margin-left:14px;
+			padding: 5px 10px;
+			border-radius: 100px;
+			font-size: 12px;
+		}
+		.board_list_wrap .paging a:first-child{
+			margin-left: 0;
+		}
+		.board_list_wrap .paging a.bt{
+			border: 1px solid #eee;
+			background: #eee;
+		}
+		.board_list_wrap .paging a.num{
+			border: 1px solid green;
+			font-weight: 600;
+			color: green;
+		}
+		.board_list_wrap .paging a.num.on{
+			background: green;
+			color:#fff;
+		}
+		.title{
+			margin-top: 80;
+			margin-left: 210px;
+		}
+		th{
+			text-align: center;
+		}
+		.board_list_wrap a:hover{
+		color: green;
+		}
+		.search{
+			margin-left: 770px;
+			margin-top: 20px;
+		}
+		.write{
+			margin-top: 100px;
+			margin-left: 800px;
+			border: 1px solid green;
+			background-color:#FFF;
+            color: green;
+            padding: 5px;
+           	width: 100px;
+           	height: 50px;
+		}
+		/*버튼 css  */
+		.button {
+			-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+			-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+			-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+			-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+			transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+			display: block;
+			margin: 20px auto;
+			max-width: 180px;
+			text-decoration: none;
+			border-radius: 4px;
+			padding: 20px 30px;
+			text-align: center;
+			margin-top: 100px;
+			background-color: #E6E6E6;
+		}
+		
+		a.button {
+			color: rgba(30, 22, 54, 0.6);
+			box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+		}
+		
+		a.button:hover {
+			color: rgba(255, 255, 255, 0.85);
+			box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+		}
+		
+		a.button2 {
+			color: rgba(30, 22, 54, 0.6);
+			box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+		}
+		
+		a.button2:hover {
+			color: rgba(255, 255, 255, 0.85);
+			box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+		}
+		input{
+			border:none;
+			border-bottom: 1px solid green;
+			border-color: green;
+			text-align: center;
+		}	
+        </style>
+    </head>
+    <body> 
+            <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="../MainHomepage/UserMainHomepage.html">RunDay</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="navi">
+                	<ul>
+                		<li><a href="../NavMenu/UserBoard.html">게시판</a></li>
+                		<li><a href="../RunDistance/RunDistanceRecord.html">주행거리</a></li>
+                		<li><a href="#">코스추천</a></li>
+                		<li><a href="#">러닝크루</a></li>
+                	</ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../login/UserSignUp.html">회원가입</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../login/UserLogin.html">로그인</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+
+		<div class="board_list_wrap">
+			<table class="board_list">
+				<caption>게시판 목록</caption>
+				<h1 class="title">러닝크루모집</h1>
+					<thead>
+						<tr>
+							<th>크루 이름</th>
+							<th>시간대</th>
+							<th>지역</th>
+							<th>모집인원</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tit">
+								<input type="text">
+							</td>
+							<td>
+								<input type="text">
+							</td>
+							<td>
+								<input type="text">
+							</td>
+							<td>
+								<input type="text">
+							</td>
+						</tr>			
+			</table>
+			  <div class="wrap">
+      			<a href="#" class="button">등록</a>
+			  </div>
+		</div>
+		        <!-- Footer-->
+        <footer class="py-5 bg-black">
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Runday!</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+ 	</body>
+ 	</html>
