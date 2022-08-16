@@ -1,9 +1,12 @@
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
+        
+		 <link href="css/styles.css" rel="stylesheet" />
+        
         <title>RunDay</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -12,274 +15,221 @@
         <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
         <style>
-        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
-        *{
-        	margin: 0;
-        	padding: 0;
-        }
+		*{
+			margin: 0;
+			padding: 0;
+		}
 		
-        ul, li{
-        	list-style: none;
-        	color: inherit;
-        }
-        a{
-        	text-decoration: none;
-        	color: inherit;
-        }
-        .board_wrap{
-        	width: 950px;
-        	margin: 100px auto;
-        }
-        .board_title{
-        	margin-bottom: 30px;
-        }
-       	.board_title strong{
-       		font-size: 3rem;
-       	}
-       	.board_title p{
-       		margin-top: 5px;
-       		font-size: 1.4rem;
-       	}
-       	.bt_wrap{
-       		margin-top: 30px;
-       		font-size: 0;
-       		text-align: center;
-       	}
-       	.bt_wrap a{
-       		display: inline-block;
-       		min-width: 80px;
-       		margin-left: 10px;
-       		padding: 10px;
-       		border: 1px solid #000;
-       		border-radius: 2px;
-       		font-size: 1.4rem;
-       	}
-       	.bt_wrap a:first-child{
-       		margin-left: 0;
-       	}
-       	.bt_wrap a.on{
-       		background: #000;
-       		color: #fff;
-       	}
-       	.board_list{
-       		width: 100%;
-       		border-top: 2px solid #000;
-       	}
-       	.board_list > div{
-       		border-bottom:1px solid #ddd;
-       		font-size: 0;
-       	}
-       	.board_list > div.top{
-       		border-bottom: 1px solid #999;
-       		border-color: #999;
-       		background-color: #D8D8D8;
-       	}
-       	.board_list > div:last-child{
-       		border-bottom: 1px solid #000;
-       	}
-       	.board_list > div > div{
-       		display: inline-block;
-       		text-align: center;
-       		font-size: 1.4rem;
-       	}
-       	.board_list > div > div{
-       		display: inline-block;
-       		padding: 15px 0;
-       		text-align: center;
-       		font-size: 1.4rem;
-       	}
-       	.board_list > div.top > div{
-       		font-weight: 600;
-       	}
-       	.board_list .num {
-       		width: 10%;
-       	}
-    	.board_list .title {
-       		width: 60%;
-       		text-align: left;
-       	}
-       	.board_list .top .title{
-       		text-align: center;
-       	}
-       	.board_list .writer {
-			width: 10%;
+		table{
+			border-collapse: collapse;
 		}
-       	.board_list .date {
-			width: 10%;
+		caption{
+			display: none;
 		}
-       	.board_list .count {
-			width: 10%;
+		a{
+			text-decoration: none;
+			color:inherit;
 		}
-		.board_page{
-			margin-top: 30px;
+		
+		.board_list_wrap{
+			padding:50px;
+			height: 950px;
+		}
+		.board_list{
+			width: 70%;
+			border-top: 2px solid #5858FA;
+			margin-left: 220px;
+			margin-top: 50px;
+		}
+		.board_list tr{
+			border-bottom: 1px solid #ccc;
+		}
+		.board_list th,
+		.board_list td{
+			padding: 10px;
+			font-size: 14px;
+		}
+		.board_list td{
 			text-align: center;
+		}
+		.board_list .tit:hover{
+			text-decoration: underline;
+		}
+		.board_list_wrap .paging{
+			margin-top: 20px;
 			font-size: 0;
+			margin-left: 600px;
 		}
-		.board_page a{
-			display: inline-block;
-			width: 32px;
-			height: 32px;
-			box-sizing:border-box;
-			border: 1px solid #ddd;
-			border-left: 0;
-			vertical-align: middle;
-			border-left: 0;
-			line-height: 100%;
+		.board_list_wrap .paging a{
+			display: inline-blcok;
+			margin-left:14px;
+			padding: 5px 10px;
+			border-radius: 100px;
+			font-size: 12px;
 		}
-		.board_page a.bt{
-			padding-top: 10px;
-			font-size: 1.2rem;
-			letter-spacing: -1px;
+		.board_list_wrap .paging a:first-child{
+			margin-left: 0;
 		}
-		.board_page a.num{
-			padding-top: 9px;
-			font-size: 1.4rem;
+		.board_list_wrap .paging a.bt{
+			border: 1px solid #eee;
+			background: #eee;
 		}
-		.board_page a.num.on{
-			border-color: #000;
-			background: #000;
-			color: #fff;
+		.board_list_wrap .paging a.num{
+			border: 1px solid green;
+			font-weight: 600;
+			color: green;
 		}
-		.board_page a:first-child {
-			border-left: 1px solid #ddd;
-        }
-        .text{
-        	text-align: center;
-        	padding-top: 30px;
-        }
-        .search_condition{
-        	width: 100px;
-        	height: 28px;
-        }
+		.board_list_wrap .paging a.num.on{
+			background: #5858FA;
+			color:#fff;
+		}
+		.title{
+			margin-top: 80;
+			margin-left: 210px;
+		}
+		th{
+			text-align: center;
+		}
+		.board_list_wrap a:hover{
+		color: green;
+		}
+		.search{
+			margin-left: 770px;
+			margin-top: 20px;
+		}
+		.write{
+			margin-left: 1200px;
+			border: 1px solid skyblue;
+            background-color: rgba(0,0,0,0);
+            color: skyblue;
+            padding: 5px;
+		}
         </style>
     </head>
-    <body id="page-top"> 
-        <!-- Navigation-->
+    <body> 
+            <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
                 <a class="navbar-brand" href="../MainHomepage/UserMainHomepage.html">RunDay</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="navi">
                 	<ul>
-                		<li><a href="#">게시판</a></li>
-                		<li><a href="#">주행거리</a></li>
+                		<li><a href="../NavMenu/UserBoard.html">게시판</a></li>
+                		<li><a href="../RunDistance/RunDistanceRecord.html">주행거리</a></li>
                 		<li><a href="#">코스추천</a></li>
                 		<li><a href="#">러닝크루</a></li>
                 	</ul>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#!">회원가입</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">로그인</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../login/UserSignUp.html">회원가입</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../login/UserLogin.html">로그인</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="board_wrap">
-        	<div class="board_title">
-        		<strong>자유 게시판</strong>
-        		<p>운영원칙에 따라 자유롭게 이용하시면 됩니다.</p>
-        	</div>
-        	<div class="board_list_wrap">
-        		<div class="board_list">
-        			<div class="top">
-        				<div class="num">No.</div>
-        				<div class="title">
-        					<a href="../BoardView/UserBoardView.html">제목</a>
-        				</div>
-        				<div class="writer">글쓴이</div>
-        				<div class="date">작성일</div>
-        				<div class="count">조회</div>
-        			</div>
-        			<div>
-			        	<div class="num">6</div>
-        				<div class="title"><a href="../BoardView/UserBoardView.html">오랜만에 뛰니 좋네요!</a></div>
-        				<div class="writer">이재용</div>
-        				<div class="date">22.07.30</div>
-        				<div class="count">57</div>
-        			</div>
-        			<div>
-			        	<div class="num">5</div>
-        				<div class="title"><a href="#">페이스 단축 팁</a></div>
-        				<div class="writer">김런</div>
-        				<div class="date">22.07.28</div>
-        				<div class="count">57</div>
-        			</div>
-        			<div>
-			        	<div class="num">4</div>
-        				<div class="title"><a href="#">비오는 날 10키로 뛰었어요ㅎ</a></div>
-        				<div class="writer">메시</div>
-        				<div class="date">22.07.27</div>
-        				<div class="count">49</div>
-        			</div>
-  			        <div>
-			        	<div class="num">3</div>
-        				<div class="title"><a href="#">한강 같이 뛰실 분</a></div>
-        				<div class="writer">호날두</div>
-        				<div class="date">22.07.26</div>
-        				<div class="count">23</div>
-        			</div>
-  			        <div>
-			        	<div class="num">2</div>
-        				<div class="title"><a href="#">러닝화 추천좀 해주세요~~</a></div>
-        				<div class="writer">박지성</div>
-        				<div class="date">22.08.01</div>
-        				<div class="count">23</div>
-        			</div>
-        			<div>
-			        	<div class="num">1</div>
-        				<div class="title"><a href="#">러닝 호흡법 질문이요.</a></div>
-        				<div class="writer">손흥민</div>
-        				<div class="date">22.07.25</div>
-        				<div class="count">35</div>
-        			</div>
-        			<div></div>
-        			<div></div>
-        			<div></div>
-        			<div></div>
-        		</div>
-        		<div class="board_page">
-        			<a href="#" class="bt first"> << </a>
-        			<a href="#" class="bt prev"> < </a>
-        			<a href="#" class="num on">1</a>
-        			<a href="#" class="num">2</a>
-        			<a href="#" class="num">3</a>
-        			<a href="#" class="num">4</a>
-        			<a href="#" class="num">5</a>
-        			<a href="#" class="bt"> > </a>
-        			<a href="#" class="bt"> >> </a>
-        		</div>
-        		<div class="bt_wrap">
-        			<a href="UserBoardWrite.html" class="on">
-        				<i class="fa-solid fa-pen"></i>
-       				</a>
-        			<!--<a href="#">수정</a> -->
-        		</div>
-        	</div>
-        	<div class="search">
-        		<div class="text">
-        			<select name="search_condition" class="search_condition">
-        				<option value="all">검색조건</option>
-        				<option value="No">번호</option>
-        				<option value="title">제목</option>
-        				<option value="writer">글쓴이</option>
-        				<option value="date">작성일</option>
-        			</select>
-        			<input type="text" placeholder="검색어를 입력해주세요">
-        			&nbsp;&nbsp;
-        			<a href="#">
-        				<i class="fa-solid fa-magnifying-glass"></i>
-       				</a>
-        		</div>
-        	</div>       	
-        </div>
-        <div class="footer">
-		        <footer class="py-5 bg-black">
-	            	<div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Runday!</p></div>
-	       		 </footer>
-		</div>     
- </body>
- </html>
+        <!-- Header-->
+		<div class="board_list_wrap">
+			<table class="board_list">
+				<caption>게시판 목록</caption>
+				<h1 class="title">자유 게시판</h1>
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>제목</th>
+							<th>글쓴이</th>
+							<th>작성일</th>
+							<th>조회</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>6</td>
+							<td class="tit">
+								<a href="UserRunCrewView.html">오랜만에 뛰니 좋네요!</a>
+							</td>
+							<td>이재용</td>
+							<td>22.07.30</td>
+							<td>57</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td class="tit">
+								<a href="UserRunCrewView.html">페이스 단축 팁</a>
+							</td>
+							<td>김데이</td>
+							<td>22.07.28</td>
+							<td>51</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td class="tit">
+								<a href="#">비오는 날 10키로 뛰었어요!</a>
+							</td>
+							<td>메시</td>
+							<td>22.07.274</td>
+							<td>49</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td class="tit">
+								<a href="#">한강 같이 뛰실 분</a>
+							</td>
+							<td>호날두</td>
+							<td>22.07.26</td>
+							<td>23</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td class="tit">
+								<a href="#">러닝화 추천 좀 해주세요~~</a>
+							</td>
+							<td>박지성</td>
+							<td>22.07.25</td>
+							<td>41</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td class="tit">
+								<a href="#">러닝 호흡법 질문이요.</a>
+							</td>
+							<td>손흥민</td>
+							<td>22.07.25</td>
+							<td>35</td>
+						</tr>
+
+					</tbody>				
+			</table>
+			<div class="paging">
+				<a href="#" class="bt">첫 페이지</a>
+				<a href="#" class="bt">이전 페이지</a>
+				<a href="#" class="num on">1</a>
+				<a href="#" class="num">2</a>
+				<a href="#" class="num">3</a>
+				<a href="#" class="bt">다음 페이지</a>
+				<a href="#" class="bt">마지막 페이지</a>
+			</div>
+			<button class="write">
+				글쓰기
+			</button>
+			<div class="search">
+			<input type="text" placeholder="검색어를 입력해주세요">
+        	&nbsp;&nbsp;
+        	<a href="#">
+        		<i class="fa-solid fa-magnifying-glass"></i>
+       		</a>
+			</div>
+			<img alt="" src="../image/run2.png" style="width: 200px; margin-left: 600px;">
+			<img alt="" src="../image/run3.png" style="width: 200px;">
+		</div>
+		        <!-- Footer-->
+        <footer class="py-5 bg-black">
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Runday!</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+ 	</body>
+ 	</html>

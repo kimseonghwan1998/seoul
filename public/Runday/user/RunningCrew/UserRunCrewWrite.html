@@ -34,7 +34,7 @@
 		
 		.board_list_wrap{
 			padding:50px;
-			height: 950px;
+			height: 630px;
 		}
 		.board_list{
 			width: 70%;
@@ -151,6 +151,62 @@
 			border-color: green;
 			text-align: center;
 		}	
+				.crew{
+			width: 100%;
+			height: 400px;
+			margin-top: 50px;
+			margin-left: 230px;
+		}
+		.leader{
+			width: 100%;
+			height: 100px;
+			display: flex;
+		}
+		.goal{
+			width:100%;
+			height: 100px;
+			display: flex;
+		}
+		.first{
+			display: flex;
+		}
+		.first h4{
+			margin-left: 40px;
+		}
+		.second{
+			display: flex;
+			margin-top: 20px;
+		}
+		.second h4{
+			margin-left: 40px;
+		}
+		.third{
+			display: flex;
+			margin-top: 30px;
+		}
+		.third h4{
+			margin-left: 40px;
+		}
+		.wrap {
+			text-align: center;
+			margin-top: 100px;
+			display: flex;
+		}
+		.inform input{
+			border-bottom: 1px solid black;
+		}
+		button {
+			color: #dfd8d8;
+			background-color: #034938;
+			font-size: 15px;
+			border: 1px solid #2d63c8;
+			padding: 1px 40px;
+			cursor: pointer
+		}
+		button:hover {
+			color: #2d63c8;
+			background-color: #ffffff;
+		}
         </style>
     </head>
     <body> 
@@ -205,9 +261,44 @@
 							</td>
 						</tr>			
 			</table>
+						<div class="crew">
+				<div class="leader">
+					<h1 style="color: #0E0301;">크루리더</h1> &nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="text" style="height: 50px;">
+				</div>
+				<div class="goal">
+					<h1 style="color: #0E0301;">크루목표</h1> &nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="text" style="height: 50px;">
+				</div>
+				<div class="inform">
+					<h1 style="color: #0E0301;">크루원 정보</h1>
+					<div class="first">
+					<input type="text"> &nbsp;&nbsp;&nbsp;
+					<input type="text"> &nbsp;&nbsp;&nbsp;
+					<input type="text"> &nbsp;&nbsp;&nbsp;
+					<input type="text"> &nbsp;&nbsp;&nbsp;
+					</div>
+					
+					<div class="second">
+					<input type="text"> &nbsp;&nbsp;&nbsp;
+					<input type="text"> &nbsp;&nbsp;&nbsp;
+					<input type="text"> &nbsp;&nbsp;&nbsp;
+					<input type="text"> &nbsp;&nbsp;&nbsp;
+					</div>
+					
+					<div class="third">
+					<input type="text"> &nbsp;&nbsp;&nbsp;
+					<input type="text"> &nbsp;&nbsp;&nbsp;
+					<input type="text"> &nbsp;&nbsp;&nbsp;
+					<button type="button" name="myButton">추가</button>
+					</div>
+				</div>
+			</div>
+        </div>
 			  <div class="wrap">
-      			<a href="#" class="button">등록</a>
+      			<a href="#" class="button" style="font-weight: bold; background-color: beige;">등록</a>
 			  </div>
+		  
 		</div>
 		        <!-- Footer-->
         <footer class="py-5 bg-black">
