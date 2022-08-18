@@ -16,16 +16,12 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<style>
 	@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
 	*{
 		margin: 0;
 		padding: 0;
-	}
-	body{
-		background-color: white; 
-		background-image: url("../image/winter.jpg");
-		background-size: 100%;
 	}
 
 	.ftco-section{
@@ -36,6 +32,7 @@
 		display: flex;
 		width: 100%;
 		height: 100%;
+		background-color: ivory;
 	}
 	.distance{
 		width:100%;
@@ -52,7 +49,10 @@
 	}
 	input{
 		border: none;
-		border-bottom: 1px solid black;
+		border-right: 0px;
+		border-top: 0px;
+		border-left: 0px;
+		border-bottom: 0px;
 		text-align: center;
 	}
 	.p{
@@ -97,7 +97,6 @@
 	  cursor: pointer;
 	  outline: none;
 	  }
-
 	.button:hover {
 	  background-color: #2EE59D;
 	  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
@@ -128,15 +127,33 @@
 </head>
 <body>
 <div class="wrap">
+<!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="../MainHomepage/UserMainHomepage.html" style="margin-left: 173px;">RunDay</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="navi">
+                	<ul>
+                		<li><a href="../NavMenu/UserBoard.html">게시판</a></li>
+                		<li><a href="../RunDistance/RunDistanceRecord.html">주행거리</a></li>
+                		<li><a href="#">코스추천</a></li>
+                		<li><a href="../RunningCrew/UserRunCrewMain.html">러닝크루</a></li>
+                	</ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../login/UserSignUp.html" style="margin-left: 100px">회원가입</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../login/UserLogin.html">로그인</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 	<div class="leftsidebar">
-		<a href="../MainHomepage/UserMainHomepage.html">
-			<img alt="" src="../image/runday.gif">
-		</a>
+	<div class="picture">
 		<div class="distance">
 			<div class="header">
-				<h3>주행 거리</h3>
 			</div>
-			<div class="km">
+			<div class="km" style="margin-top: 130px;">
 				<input type="text" value=4.73>
 				<p>거리(km)</p>
 			</div>
@@ -162,7 +179,7 @@
 				<div class="row justify-content-center">
 				</div>
 				<div class="row">
-					<div class="col-md-12" style="margin-left: 200px;">
+					<div class="col-md-12" style="margin-left: 150px;">
 						<div class="elegant-calencar d-md-flex">
 							<div class="wrap-header d-flex align-items-center img" style="background-image: url(images/bg.jpg);">
 					      <p id="reset">Today</p>
@@ -259,7 +276,8 @@
  				 <button class="button button2">수정</button>
 			</div>
 		</section>
-	</div>>		
+		</div>
+	</div>	
 </div>
 
         <!-- Footer-->
